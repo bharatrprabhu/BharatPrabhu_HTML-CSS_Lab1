@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.barcontainer {
+  position: relative;
+  width:300px;
+  height: 400px;
+  border: 3px solid #73AD21;
+  background-color: #BBB;
+  margin: auto;
+  padding: 10px;
+} 
+div.barcontainerview{
+	position: absolute;
+  top: 0%;
+  width: 99%;
+  height:76%;
+  text-align: bottom;
+  margin-top:10px;
+}
+div.barcontainerfooter {
+  position: absolute;
+  bottom: 0%;
+  width: 99%;
+  height: 20%;
+  text-align: center;
+}
+
+.bar {
+  width: 8%;
+  bottom:0px;
+  height: 100%;
+  background-color: #CCC;
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  text-align: bottom;
+}
+.bar:nth-child(1) {
+  left: 12%; 
+}
+.bar:nth-child(2) {
+  left: 44%;  
+}
+.bar:nth-child(3) {
+  left: 77%;
+}
+
+@keyframes bar1 {
+  0%   {background-color: black;height: 2%;}
+  100% {background-color: #666;height: 30%;}
+}
+@keyframes bar2 {
+  0%   {background-color: black;height: 2%;}
+  100% {background-color: #666;height: 40%;}
+}
+@keyframes bar3 {
+  0%   {background-color: black;height: 2%;}
+  100% {background-color: #666;height: 80%;}
+}
+.barlabel {
+  position: absolute;
+  background: #BBB;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align:center;
+  margin-top:50px;
+}
+.barValue {
+  position: absolute;
+  background: #666;
+  bottom: 0;
+  width: 100%;
+  animation-duration: 10s;
+}
+#bar1 {
+  animation-name: bar1;
+  height: 30%;
+}
+#bar2 {
+  animation-name: bar2;
+  height: 40%;
+}
+#bar3 {
+  animation-name: bar3;
+  height: 80%;
+}
+</style>
+</head>
+<body>
+
+<div class="barcontainer">
+	<div class="barcontainerview">
+   <div class="bar">
+   <div class='barValue' id='bar1'></div>
+   <div class='barlabel'>30%</div>
+   </div>
+    
+    <div class="bar"><div class='barValue' id='bar2'></div> <div class='barlabel'>
+      40%
+    </div></div>
+    <div class="bar"><div class='barValue' id='bar3'></div> <div class='barlabel'>
+      80%
+    </div></div>
+    </div>
+  <div class="barcontainerfooter"> <h1>Bar Graph</h1></div>
+</div>
+
+</body>
+</html>
+
+
